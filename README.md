@@ -8,79 +8,81 @@ The Blackjack with AI project is an interactive card game simulation where the g
 
 Features
 
-Card Game Logic: Implements the rules and mechanics of Blackjack.
+    Card Game Logic: Implements the rules and mechanics of Blackjack.
 
-AI Decision Making: Utilizes Monte Carlo simulations and Q-Learning for reinforcement learning.
+    AI Decision Making: Utilizes Monte Carlo simulations and Q-Learning for reinforcement learning.
 
-GUI: Provides a visual representation of the game using OpenCV or Qt.
+    GUI: Provides a visual representation of the game using OpenCV or Qt.
 
-Database Integration: Tracks player statistics and AI learning outcomes using SQL.
+    Database Integration: Tracks player statistics and AI learning outcomes using SQL.
 
-Learning and Adaptation: AI improves its decision-making over multiple games through trial and error.
+    Learning and Adaptation: AI improves its decision-making over multiple games through trial and error.
 
 System Architecture
 
 1. Game Logic
 
-Card Deck: Represented as a shuffled collection of cards.
+    Card Deck: Represented as a shuffled collection of cards.
 
-Player and Dealer: Each has a hand of cards, with actions such as hit, stand, split, and double down.
+    Player and Dealer: Each has a hand of cards, with actions such as hit, stand, split, and double down.
 
-Scoring Rules: Implements Blackjack scoring, including handling of aces.
+    Scoring Rules: Implements Blackjack scoring, including handling of aces.
 
 2. AI Implementation
 
-Monte Carlo Simulation:
+    Monte Carlo Simulation:
 
-Simulates random games to evaluate the probability of success for various actions.
+    Simulates random games to evaluate the probability of success for various actions.
 
-Updates a decision-making policy based on outcomes.
+    Updates a decision-making policy based on outcomes.
 
-Q-Learning:
+    Q-Learning:
 
-Reinforcement learning technique where the AI learns optimal strategies through rewards.
+    Reinforcement learning technique where the AI learns optimal strategies through rewards.
 
-States: Player’s hand value, dealer’s visible card.
+    States: Player’s hand value, dealer’s visible card.
 
-Actions: Hit, stand, etc.
+    Actions: Hit, stand, etc.
 
 3. GUI
 
-OpenCV or Qt: Visual representation of cards, scores, and game prompts.
+    OpenCV or Qt: Visual representation of cards, scores, and game prompts.
 
-Interactive Gameplay: Users can interact with the game through the GUI.
+    Interactive Gameplay: Users can interact with the game through the GUI.
 
 4. Database
 
-SQL Integration:
+    SQL Integration:
 
-Tracks player performance and AI learning history.
+    Tracks player performance and AI learning history.
 
-Stores statistics and game outcomes.
+    Stores statistics and game outcomes.
 
-How It Works
+    How It Works
 
 Game Initialization:
 
-A shuffled deck is created, and cards are dealt to players and the dealer.
+    A shuffled deck is created, and cards are dealt to players and the dealer.
 
 Player Actions:
 
-The player chooses actions (hit, stand, etc.) based on their hand and visible dealer card.
+    The player chooses actions (hit, stand, etc.) based on their hand and visible dealer card.
 
 AI Decision Making:
 
-The AI calculates the optimal move using Monte Carlo and Q-Learning algorithms.
+    The AI calculates the optimal move using Monte Carlo and Q-Learning algorithms.
 
-Over time, the AI refines its decision-making through reinforcement learning.
+    Over time, the AI refines its decision-making through reinforcement learning.
 
 Game Resolution:
 
-The winner is determined based on the rules of Blackjack.
+    The winner is determined based on the rules of Blackjack.
 
 Database Update:
 
-Game results are recorded, and AI learning parameters are updated.
+    Game results are recorded, and AI learning parameters are updated.
+
+
 
 Technologies Used
 
@@ -94,34 +96,39 @@ Database: SQL
 
 Libraries: Boost, MLpack (for reinforcement learning)
 
+
+
+
+
+
 Prerequisites
 
-C++ Compiler: GCC, Clang, or MSVC
+    C++ Compiler: GCC, Clang, or MSVC
 
-GUI Library: OpenCV or Qt installed
+    GUI Library: OpenCV or Qt installed
 
-Database: SQLite or MySQL
+    Database: SQLite or MySQL
 
-AI Libraries: MLpack or TensorFlow C++ API (optional)
+    AI Libraries: MLpack or TensorFlow C++ API (optional)
 
 How to Run the Project
 
 Clone the Repository:
 
-git clone https://github.com/your-username/blackjack-with-ai.git
-cd blackjack-with-ai
+    git clone https://github.com/Giolandoll/blackjack-with-ai.git
+    cd blackjack-with-ai
 
 Build the Project:
 
-Use a C++ IDE (e.g., Visual Studio, CLion) or compile manually:
+    Use a C++ IDE (e.g., Visual Studio, CLion) or compile manually:
 
-g++ -o blackjack main.cpp -lboost -lopencv -lsqlite3
+    g++ -o blackjack main.cpp -lboost -lopencv -lsqlite3
 
 Run the Game:
 
-./blackjack
+    ./blackjack
 
 Play and Observe:
 
-Play Blackjack and observe the AI’s decision-making.
+    Play Blackjack and observe the AI’s decision-making.
 
