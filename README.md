@@ -86,15 +86,15 @@ Database Update:
 
 Technologies Used
 
-Programming Language: C++
+    Programming Language: C++
 
-AI Algorithms: Monte Carlo Simulation, Q-Learning
+    AI Algorithms: Monte Carlo Simulation, Q-Learning
 
-GUI Framework: OpenCV or Qt
+    GUI Framework: OpenCV or Qt
 
-Database: SQL
+    Database: SQL
 
-Libraries: Boost, MLpack (for reinforcement learning)
+    Libraries: Boost, MLpack (for reinforcement learning)
 
 
 
