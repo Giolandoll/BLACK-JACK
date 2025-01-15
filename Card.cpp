@@ -28,3 +28,16 @@ void Card::PrintCard() const {
 Card::~Card(){
         //Nothing here
 }
+
+int Card::GetValue() const { 
+    return value; 
+}
+
+Card::CardNames Card::GetName() const { 
+    
+    return static_cast<CardNames>(name); 
+}
+
+Card::Suits Card::GetSuit() const { 
+    return static_cast<Suits>(suit); 
+}         

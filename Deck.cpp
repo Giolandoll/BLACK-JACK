@@ -38,13 +38,25 @@ void Deck::Shuffle(){
 }
 
 
-Card* Deck::TopCard(){
-    return deck.front();
+// Card* Deck::TopCard(){
+//     return deck.front();
+// }
+
+
+// void Deck::PopCard(){
+//     deck.push_back(deck.front());
+//     deck.erase(deck.begin());
+// }
+
+unique_ptr<Card> Deck::DealCard() {
+    if (deck.empty()) {
+        return nullptr; // Return null if no cards are left
+    }
+    Card* card = move(deck.back()); // Move the unique_ptr of the last card
+    deck.pop_back();
+    return unique_ptr<Card>(card); 
 }
 
-
-void Deck::PopCard(){
-
-    deck.push_back(deck.front());
-    deck.erase(deck.begin());
+bool Deck::IsEmpty() const {
+    return deck.empty();
 }

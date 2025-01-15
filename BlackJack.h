@@ -1,6 +1,9 @@
 #include <iostream>
 #include <array>
 #include <deque>
+#include <vector>
+#include <memory>
+
 using namespace std;
 
 
@@ -44,6 +47,11 @@ public:
     Card(CardNames n = ACE, Suits s =CLUBS, int v = 1)
         : name(n), suit(s), value(v) {}
 
+    int GetValue() const;// Get card value
+    CardNames GetName() const;// Get card name
+    Suits GetSuit() const;      
+
+    
     virtual ~Card(); // Virtual destructor
     void PrintCard() const;    
 
@@ -62,15 +70,28 @@ public:
     void Shuffle();
     void PrintAll() const;
 
-    Card* TopCard();//Takes the top card and shows it face
-    void  PopCard();//'Burns' the top card
+    // Card* TopCard();//Takes the top card and shows it face
+    // void  PopCard();//'Burns' the top card
+    unique_ptr<Card> DealCard(); // Add this to deal a card
+    bool IsEmpty() const;            // Check if the deck is empty
+
 };
 
 
 class Player{
 
 private:
+    string name;
+    vector<unique_ptr<Card>> hand;
 
+public:
+
+    Player(const string& name);
+
+    void AddCard(unique_ptr<Card> card);
+    void PrintHand() const;
+    const string &GetName() const;
+    int CalculateScore() const;
 
 
 };
