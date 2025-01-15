@@ -72,14 +72,3 @@ private:
 
 };
 
-// // Main function
-// int main() {
-//     Deck deck;
-//     deck.SetupCards();
-
-//     cout << endl;
-
-//     deck.PrintAll();
-
-//     return 0;
-// }
