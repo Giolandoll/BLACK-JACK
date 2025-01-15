@@ -1,6 +1,6 @@
 #include <iostream>
 #include <array>
-#include <vector>
+#include <deque>
 using namespace std;
 
 
@@ -54,13 +54,16 @@ public:
 class Deck {
 
 private:
-    vector<Card*> deck;
+    deque<Card*> deck;
 
 public:
     Deck();
     ~Deck();
+    void Shuffle();
     void PrintAll() const;
 
+    Card* TopCard();//Takes the top card and shows it face
+    void  PopCard();//'Burns' the top card
 };
 
 
@@ -71,4 +74,3 @@ private:
 
 
 };
-
