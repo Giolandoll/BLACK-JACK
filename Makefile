@@ -1,6 +1,6 @@
 CC = g++
-CFLAGS = -std=c++11 -Wall
-OBJ = BlackJackSource.o Card.o Player.o Deck.o
+CFLAGS = -std=c++14 -Wall
+OBJ = BlackJackSource.o Card.o Player.o Deck.o Dealer.o
 
 # The target executable
 TARGET = BlackJack
@@ -22,9 +22,12 @@ Player.o: Player.cpp BlackJack.h
 Deck.o: Deck.cpp BlackJack.h
 	$(CC) $(CFLAGS) -c Deck.cpp
 
+Dealer.o: Dealer.cpp BlackJack.h
+	$(CC) $(CFLAGS) -c Dealer.cpp
+
 # Clean up object files and the executable (Windows compatible)
 clean:
-	del /Q BlackJackSource.o Card.o Player.o Deck.o $(TARGET)
+	del /Q BlackJackSource.o Card.o Player.o Deck.o Dealer.o $(TARGET)
 
 # Rebuild the entire project
 rebuild: clean $(TARGET)
