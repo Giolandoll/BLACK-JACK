@@ -120,10 +120,7 @@ Clone the Repository:
 
 Build the Project:
 
-    Use a C++ IDE (e.g., Visual Studio, CLion) or compile manually:
-
-    g++ -o blackjack main.cpp -lboost -lopencv -lsqlite3
-
+    Use- make 
 Run the Game:
 
     ./blackjack
