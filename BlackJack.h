@@ -90,6 +90,7 @@ public:
 
     void AddCard(unique_ptr<Card> card);
     void PrintHand() const;
+    void PrintHand(bool one) const;
     const string &GetName() const;
     int CalculateScore() const;
     void Hit(unique_ptr<Card> card);   // Take another card
@@ -97,6 +98,7 @@ public:
     bool CanSplit() const;             // Check if splitting is allowed
     void Split(vector<unique_ptr<Card>>& newHand); // Split the hand into two hands
     void DoubleDown(unique_ptr<Card> card); // Double the bet and take one card
+    int GetHandSize() const;
     bool IsStanding() const;           // Check if the player is standing
 };
 

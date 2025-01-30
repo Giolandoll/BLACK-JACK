@@ -24,9 +24,10 @@ int Player::CalculateScore() const {
             ++aces;
         }
     }
+    // cout << aces << endl; line to check Ace counts
 
     // Handle aces: make one ace count as 11 if it doesn't cause bust
-    while (aces > 0 && score <= 21) {
+    while (aces > 0 && score <= 11) {
         score += 10; // Convert ace from 1 to 11
         --aces;
     }
@@ -40,6 +41,15 @@ void Player::PrintHand() const {
         card->PrintCard(); //Use the Card class's PrintCard() method
     }
     cout << "Score: " << CalculateScore() << endl;
+}
+
+void Player::PrintHand(bool one) const {
+    if (one) {
+        if (!hand.empty()) {
+            hand[0]->PrintCard(); // Print only the first card
+            cout << "[Hidden Card]" << endl; // Represent the hidden card(s)
+        }
+    }
 }
 
 const string& Player::GetName() const {
@@ -62,9 +72,13 @@ void Player::Stand() {
     cout << name << " has chosen to stand." << endl;
 }
 
+int Player::GetHandSize() const{
+    return hand.size();
+}
+
 //Check if the player can "Split"
 bool Player::CanSplit() const {
-    return hand.size() == 2 && hand[0]->GetValue() == hand[1]->GetValue();
+    return GetHandSize() == 2 && hand[0]->GetValue() == hand[1]->GetValue();
 }
 
 //Split the player's hand into two hands

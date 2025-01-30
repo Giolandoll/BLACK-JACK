@@ -27,6 +27,7 @@ void Deck::PrintAll() const {
 }
 
 void Deck::Shuffle(){
+    // srand(999);
     random_shuffle(deck.begin(), deck.end());
 }
 
